@@ -1,0 +1,15 @@
+<html>
+<body>
+<h1>The Kitchen Project</h1>
+<hr>
+
+<h3>Cart: </h3>
+<ul>
+    <% cart["items"].forEach(item => { %>
+        <li><%= item %></li> <% }); %>
+</ul>
+
+<h4>Total: <%= cart.total %> $</h4>
+<h3><a href="/confirm">Confirm Order / View Order Details</a></h3>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<html>
+<body>
+<h1>The Kitchen Project</h1>
+<hr>
+
+</form>
+<form action="/get-food" method="POST">
+    <h3>Search for Food: <input name="foodName" type="text" /><input type="submit" /></h3> <br />
+    
+</form>
+<h3>Search Results: </h3>
+<%= food %><% if (buyButton != null) {%>
+    <form style="display: inline;" action="/add" method="POST">
+    <button type="submit"><%= buyButton %></button>
+    </form>
+    <% }; %>
+<h3><a href="/cart">Go to "Checkout" Page</a></h3>
+<hr>
+<form action="/admin" method="POST">
+<h3>Admin Log-in: <input name="adminPassword" type="password" /><input type="submit" /></h3></form>(default password is 999)
+</body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+
+<body>
+    <h1 style="display: inline;">The Kitchen Project </h1>(admin)
+    <hr>
+
+
+
+    <ul>
+        <% allItems.forEach(item=> { %>
+            <li>
+                <%= item["name"] +" "+ item["price"]+"$" %>
+            </li>
+            <% }); %>
+    </ul>
+    <h3>Type Item to Remove: </h3>
+    <form style="display: inline;" action="/rem" method="post">
+        <input name="rem" type="text"> <input type="submit" value="Remove">
+    </form>
+    <h3>Type Item to Add: </h3>
+    <form style="display: inline;" action="/rem1" method="post">
+        <input name="rem1" type="text" required><input required name="rem2" type="number"> <input type="submit"
+            value="Add">
+    </form>
+    <h3>Change Admin Password: </h3>
+    <form style="display: inline;" action="/change" method="post">
+        <input required name="newPass" type="password"> <input type="submit"
+            value="Change Password">
+    </form>
+</body>
+
+</html>
